@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
+import Link from "next/link";
 const HeroHeadings = () => {
   return (
     <div className="w-full px-4 lg:w-5/12 mt-8 lg:mt-0"> 
@@ -17,20 +17,20 @@ const HeroHeadings = () => {
         </p>
         <ul className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-5 w-full">
           <li>
-            <a
+            <Link
               href="/#"
               className="w-full sm:w-auto min-w-[200px] inline-flex items-center justify-center rounded-lg bg-green-700 px-7 py-3 text-center text-base font-medium text-white hover:bg-green-800 transition-colors duration-300"
             >
               Get Started
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/#"
               className="w-full sm:w-auto min-w-[200px] inline-flex items-center justify-center rounded-lg bg-white px-7 py-3 text-center text-base font-medium text-green-700 border border-green-700 hover:bg-green-50 transition-colors duration-300"
             >
               Partner With Us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
