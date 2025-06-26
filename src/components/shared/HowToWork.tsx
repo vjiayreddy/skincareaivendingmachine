@@ -1,12 +1,60 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const Sliders = [
+  "/images/banner.png",
+  "/images/banner1.png",
+  "/images/banner.png",
+  "/images/banner1.png",
+  "/images/banner.png",
+];
 
 const HowToWork = () => {
+  const [mounted, setMounted] = useState(false);
+  const [activeStep, setActiveStep] = useState(0);
+
+  const steps = [
+    {
+      id: 1,
+      title: "Scan QR Code",
+      description: "Scan QR code on the vending machine with your smartphone",
+    },
+    {
+      id: 2,
+      title: "Complete Skin Analysis",
+      description: "Answer a few questions about your skin concerns",
+    },
+    {
+      id: 3,
+      title: "Get Your Skin Profile",
+      description: "View your personalized skin profile based on AI analysis",
+    },
+    {
+      id: 4,
+      title: "Personalized Product Recommendations",
+      description:
+        "Products suited to your skin type and condition are displayed",
+    },
+    {
+      id: 5,
+      title: "Purchase Instantly",
+      description: "Make a cashless purchase directly from the machine",
+    },
+  ];
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <>
       <div className="bg-neutral-900">
-        {/* Approach */}
-        <div className="max-w-5xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto">
-          {/* Title */}
+        <div className="max-w-7xl px-4 xl:px-0 py-10 lg:pt-20 lg:pb-20 mx-auto">
           <div className="max-w-3xl mb-10 lg:mb-14">
             <h2 className="text-white font-semibold text-2xl md:text-4xl md:leading-tight">
               How It&apos;s Work
@@ -17,135 +65,88 @@ const HowToWork = () => {
               clients.
             </p>
           </div>
-          {/* End Title */}
-          {/* Grid */}
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:items-center">
             <div className="aspect-w-16 aspect-h-9 lg:aspect-none">
-              <img
-                className="w-full object-cover rounded-xl"
-                src="https://cdn.abacus.ai/images/12081866-bae8-4d7b-98d5-66b964035f26.png"
-                alt="Features Image"
-              />
+              <div className="w-full h-full rounded-xl overflow-hidden">
+                {mounted ? (
+                  <Slider
+                    dots={true}
+                    infinite={true}
+                    speed={500}
+                    slidesToShow={1}
+                    slidesToScroll={1}
+                    autoplay={true}
+                    autoplaySpeed={4000}
+                    arrows={true}
+                    className="rounded-xl"
+                    beforeChange={(current, next) =>
+                      setActiveStep(next % steps.length)
+                    }
+                    afterChange={(current) =>
+                      setActiveStep(current % steps.length)
+                    }
+                  >
+                    {Sliders.map((slider, index) => (
+                      <div key={index}>
+                        <img
+                          className="w-full object-cover rounded-xl h-[300px] md:h-[400px] lg:h-[500px]"
+                          src={slider}
+                          alt={`Features Image ${index + 1}`}
+                        />
+                      </div>
+                    ))}
+                  </Slider>
+                ) : (
+                  <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] bg-gray-200 rounded-xl flex items-center justify-center">
+                    <span className="text-gray-500">Loading slider...</span>
+                  </div>
+                )}
+              </div>
             </div>
-            {/* End Col */}
-            {/* Timeline */}
+
             <div>
-              {/* Heading */}
               <div className="mb-4">
                 <h3 className="text-white text-lg font-medium uppercase">
                   Steps
                 </h3>
               </div>
-              {/* End Heading */}
-              {/* Item */}
-              <div className="flex gap-x-5 ms-1">
-                {/* Icon */}
-                <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                  <div className="relative z-10 size-8 flex justify-center items-center">
-                    <span className="flex shrink-0 justify-center items-center size-8 border border-green-800 text-green-500 font-semibold text-xs uppercase rounded-full">
-                      1
-                    </span>
+
+              {steps.map((step, index) => (
+                <div key={step.id} className="flex gap-x-5 ms-1">
+                  <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
+                    <div className="relative z-10 size-8 flex justify-center items-center">
+                      <span
+                        className={`flex shrink-0 justify-center items-center size-8 border transition-all duration-300 ${
+                          index === activeStep
+                            ? "border-green-500 bg-green-500/20"
+                            : "border-green-800"
+                        } ${
+                          index === activeStep
+                            ? "text-green-400 scale-110"
+                            : "text-green-500"
+                        } font-semibold text-xs uppercase rounded-full`}
+                      >
+                        {step.id}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="grow pt-0.5 pb-8 sm:pb-12">
+                    <p className="text-sm md:text-base text-neutral-400">
+                      <span
+                        className={`${
+                          index === activeStep ? "text-green-400" : "text-white"
+                        } transition-colors duration-300`}
+                      >
+                        {step.title} :{" "}
+                      </span>
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-                {/* End Icon */}
-                {/* Right Content */}
-                <div className="grow pt-0.5 pb-8 sm:pb-12">
-                  <p className="text-sm lg:text-base text-neutral-400">
-                    <span className="text-white">Scan Your Face : </span>
-                    The vending machine captures a face image using a secure,
-                    built-in camera.
-                  </p>
-                </div>
-                {/* End Right Content */}
-              </div>
-              {/* End Item */}
-              {/* Item */}
-              <div className="flex gap-x-5 ms-1">
-                {/* Icon */}
-                <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                  <div className="relative z-10 size-8 flex justify-center items-center">
-                    <span className="flex shrink-0 justify-center items-center size-8 border border-green-800 text-green-500 font-semibold text-xs uppercase rounded-full">
-                      2
-                    </span>
-                  </div>
-                </div>
-                {/* End Icon */}
-                {/* Right Content */}
-                <div className="grow pt-0.5 pb-8 sm:pb-12">
-                  <p className="text-sm lg:text-base text-neutral-400">
-                    <span className="text-white">Instant AI Analysis : </span>
-                    AI algorithms process the image to detect various skin
-                    concerns.
-                  </p>
-                </div>
-                {/* End Right Content */}
-              </div>
-              {/* End Item */}
-              {/* Item */}
-              <div className="flex gap-x-5 ms-1">
-                {/* Icon */}
-                <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                  <div className="relative z-10 size-8 flex justify-center items-center">
-                    <span className="flex shrink-0 justify-center items-center size-8 border border-green-800 text-green-500 font-semibold text-xs uppercase rounded-full">
-                      3
-                    </span>
-                  </div>
-                </div>
-                {/* End Icon */}
-                {/* Right Content */}
-                <div className="grow pt-0.5 pb-8 sm:pb-12">
-                  <p className="text-sm md:text-base text-neutral-400">
-                    <span className="text-white">Get Your Skin Report : </span>A
-                    detailed skin report is generated and shown on screen or via
-                    mobile
-                  </p>
-                </div>
-                {/* End Right Content */}
-              </div>
-              {/* End Item */}
-              {/* Item */}
-              <div className="flex gap-x-5 ms-1">
-                {/* Icon */}
-                <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                  <div className="relative z-10 size-8 flex justify-center items-center">
-                    <span className="flex shrink-0 justify-center items-center size-8 border border-green-800 text-green-500 font-semibold text-xs uppercase rounded-full">
-                      4
-                    </span>
-                  </div>
-                </div>
-                {/* End Icon */}
-                {/* Right Content */}
-                <div className="grow pt-0.5 pb-8 sm:pb-12">
-                  <p className="text-sm md:text-base text-neutral-400">
-                    <span className="text-white">
-                      Personalized Product Recommendations :{" "}
-                    </span>
-                    Products suited to the user’s skin type and condition are
-                    displayed
-                  </p>
-                </div>
-                {/* End Right Content */}
-              </div>
-              <div className="flex gap-x-5 ms-1">
-                {/* Icon */}
-                <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                  <div className="relative z-10 size-8 flex justify-center items-center">
-                    <span className="flex shrink-0 justify-center items-center size-8 border border-green-800 text-green-500 font-semibold text-xs uppercase rounded-full">
-                      5
-                    </span>
-                  </div>
-                </div>
-                {/* End Icon */}
-                {/* Right Content */}
-                <div className="grow pt-0.5 pb-8 sm:pb-12">
-                  <p className="text-sm md:text-base text-neutral-400">
-                    <span className="text-white">Purchase Instantly : </span>
-                    User can make a cashless purchase directly from the machine.
-                  </p>
-                </div>
-                {/* End Right Content */}
-              </div>
-              {/* End Item */}
+              ))}
+
               <a
                 className="group inline-flex items-center gap-x-2 py-2 px-3 bg-green-500 font-medium text-sm text-neutral-800 rounded-full focus:outline-hidden"
                 href="#"
@@ -175,12 +176,9 @@ const HowToWork = () => {
                 Get a Demo
               </a>
             </div>
-            {/* End Timeline */}
           </div>
-          {/* End Grid */}
         </div>
       </div>
-      {/* End Approach */}
     </>
   );
 };

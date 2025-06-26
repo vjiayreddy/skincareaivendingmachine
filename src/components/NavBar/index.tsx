@@ -19,17 +19,12 @@ const NavBar = () => {
     <header className="bg-white border-b border-gray-200">
       <nav
         aria-label="Global"
-        className="mx-auto flex  w-full   items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex w-full items-center justify-between p-3 lg:px-8"
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <h6 className="text-2xl text-black font-extrabold">LOGO</h6>
-            {/* <img
-              alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            /> */}
+            <img src="/images/logo/logo.svg" width="40%" />
           </a>
         </div>
         <div className="flex lg:hidden">

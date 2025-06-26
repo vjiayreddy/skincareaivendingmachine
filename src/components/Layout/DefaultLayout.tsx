@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../NavBar";
 import Footer from "../Footer";
+import NavigationBar from "../NavBar/NavBarComponent";
 
 interface DefaultLayoutProps {
   children: React.ReactNode;
@@ -8,7 +8,8 @@ interface DefaultLayoutProps {
 const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
+      <NavigationBar />
       <main className="min-h-dvh">{children}</main>
       <Footer />
     </>
