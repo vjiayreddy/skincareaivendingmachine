@@ -112,7 +112,7 @@ const BannerComponent = () => {
           >
             <iframe
               className="h-[420px] w-full"
-              src="https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1&mute=1"
+              src="/video/demo.mp4"
               title="Smart Skincare Vending Machine Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

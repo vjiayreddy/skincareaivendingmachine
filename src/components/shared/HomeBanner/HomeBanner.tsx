@@ -96,7 +96,7 @@ const HomeHeroBanner = () => {
               className="h-[320px] w-full"
               src={
                 modalOpen === true
-                  ? "https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1&mute=1"
+                  ? "/video/demo.mp4"
                   : ""
               }
             ></iframe>
