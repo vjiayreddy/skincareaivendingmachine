@@ -59,7 +59,7 @@ const MachineRentBanner = () => {
                   Smart <span className="text-green-700">Ai Skincare <br/> Vending Machine </span> for a <br/>Better Workplace
                 </h2>
                 <p className="mb-8 max-w-[485px] text-base text-body-color dark:text-dark-6">
-                  A Smart AI Skincare Vending Machine analyzes employees' skin
+                  A Smart AI Skincare Vending Machine analyzes employees&apos; skin
                   conditions using artificial intelligence and dispenses
                   personalized skincare products on-demand.
                 </p>

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import ContactFormModal from "./ContactFormModal/ContactFormModal";
+import NextImage from "next/image";
 
 const BannerComponent = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -42,7 +43,7 @@ const BannerComponent = () => {
           <div className="px-6 sm:px-8 lg:w-1/2 xl:pr-16">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
               <span className="block xl:inline">
-                India's First <span className="text-green-700">AI</span> Skincare
+                India&apos;s First <span className="text-green-700">AI</span> Skincare
               </span>{" "}
               <span className="block text-green-700 xl:inline">
                 Vending Machine
@@ -72,10 +73,12 @@ const BannerComponent = () => {
           </div>
         </div>
         <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
-          <img
+          <NextImage
             alt="Smart Skincare Vending Machine"
             src="/images/ai_vm.jpeg"
             className="absolute inset-0 h-full w-full object-cover"
+            fill={true}
+            quality={80}
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <button
