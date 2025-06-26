@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 const HeroHeadings = () => {
   return (
     <div className="w-full px-4 lg:w-5/12 mt-8 lg:mt-0"> 
