@@ -5,7 +5,7 @@ import CtaSection from "@/components/shared/CtaSection/CtaSection";
 import BannerComponent from "@/components/shared/Banner";
 
 
-export default function Example() {
+export default function HomePage() {
   return (
     <>
       <BannerComponent/>

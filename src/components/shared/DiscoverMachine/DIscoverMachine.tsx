@@ -33,7 +33,7 @@ const DiscoverMachine = () => {
                 </h2>
                 <p className="mb-8 sm:mb-10 lg:mb-12 text-sm sm:text-base leading-relaxed text-white">
                   Experience 24/7 access to a diverse selection of snacks and
-                  drinks with Daalchini's modern digital vending machine
+                  drinks with AI Skincare modern digital vending machine
                   network.
                 </p>
                 <motion.button

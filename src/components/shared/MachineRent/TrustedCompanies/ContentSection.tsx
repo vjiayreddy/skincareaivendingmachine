@@ -19,7 +19,7 @@ export default function ContentSection() {
               <span className="text-primary mb-2 block text-base sm:text-lg font-semibold">
                 Our Trusted Partners
               </span>
-              <h2 className="text-dark mb-3 text-2xl sm:text-3xl leading-[1.208] font-bold sm:text-4xl md:text-[40px]">
+              <h2 className="text-dark mb-3 text-2xl  leading-[1.208] font-bold sm:text-4xl md:text-[40px]">
                 Satisfy Your Team’s Cravings with AI Skincare Vending Solutions
               </h2>
               <p className="text-body-color text-sm sm:text-base dark:text-dark-6">

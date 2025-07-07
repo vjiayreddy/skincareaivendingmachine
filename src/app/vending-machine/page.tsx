@@ -5,15 +5,14 @@ import ContentSection from "@/components/shared/MachineRent/TrustedCompanies/Con
 import ContentSectionAlt from "@/components/shared/MachineRent/TrustedCompanies/ContentSectionAlt";
 import WhyChoose from "@/components/shared/MachineRent/WhyChoose/ContentSection";
 
-
 const MachineRent = () => {
   return (
     <>
-     <Banner/>
-     <TrustedCompanies/>
-     <ContentSection/>
-     <ContentSectionAlt/>
-     <WhyChoose/>
+      <Banner />
+      <TrustedCompanies />
+      <ContentSection />
+      <ContentSectionAlt />
+      <WhyChoose />
     </>
   );
 };
