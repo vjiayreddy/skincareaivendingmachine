@@ -10,7 +10,7 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
     <>
       {/* <NavBar /> */}
       <NavigationBar />
-      <main className="min-h-dvh">{children}</main>
+      <main className="min-h-dvh pt-[70px] lg:pt-[80px]">{children}</main>
       <Footer />
     </>
   );

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import DotShape from "./DotShaped";
@@ -96,7 +95,7 @@ const HomeHeroBanner = () => {
               className="h-[320px] w-full"
               src={
                 modalOpen === true
-                  ? "/video/demo.mp4"
+                  ? "https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1&mute=1"
                   : ""
               }
             ></iframe>

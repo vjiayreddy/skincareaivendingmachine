@@ -8,12 +8,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Sliders = [
-  "/images/banner.png",
-  "/images/banner1.png",
-  "/images/banner.png",
-  "/images/banner1.png",
-  "/images/banner.png",
-];
+  "/images/how-to-work/scan-face.png",
+  "/images/how-to-work/scan_complete.png",
+  "/images/how-to-work/get-report.png",
+  "/images/how-to-work/products.png",
+  "/images/how-to-work/payment.png",
+]
 
 const HowToWork = () => {
   const [mounted, setMounted] = useState(false);
@@ -22,8 +22,8 @@ const HowToWork = () => {
   const steps = [
     {
       id: 1,
-      title: "Scan QR Code",
-      description: "Scan QR code on the vending machine with your smartphone",
+      title: "Scan Your Face",
+      description: "Scan your face to get your skin analysis",
     },
     {
       id: 2,

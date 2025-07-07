@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import ContactFormModal from "./ContactFormModal/ContactFormModal";
-import NextImage from "next/image";
 
 const BannerComponent = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -72,13 +71,11 @@ const BannerComponent = () => {
             </div>
           </div>
         </div>
-        <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
-          <NextImage
+        <div className="relative h-100 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
+          <img
             alt="Smart Skincare Vending Machine"
-            src="/images/ai_vm.jpeg"
+            src="/images/machine_2.webp"
             className="absolute inset-0 h-full w-full object-cover"
-            fill={true}
-            quality={80}
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <button
@@ -110,13 +107,15 @@ const BannerComponent = () => {
             ref={modal}
             className="mx-auto w-full max-w-[750px] bg-white"
           >
-            <iframe
-              className="h-[420px] w-full"
-              src="/video/demo.mp4"
+            <video
+              className="h-[200px] sm:h-[420px] md:h-[420px] lg:h-[420px] xl:h-[500px] 2xl:h-[600px] w-full"
+              src="/video/leaf_water.mp4"
               title="Smart Skincare Vending Machine Demo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+              controls
+              autoPlay
+              muted
+              playsInline
+            ></video>
           </div>
 
           <button

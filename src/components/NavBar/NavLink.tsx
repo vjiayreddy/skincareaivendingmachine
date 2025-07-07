@@ -11,7 +11,7 @@ const ListItem = ({ children, NavLink }: ListItemProps) => {
           <Link
             prefetch
             href={NavLink}
-            className="flex py-2 text-base font-medium text-dark hover:text-primary dark:text-white lg:mx-5 lg:inline-flex lg:py-6"
+            className="flex py-2 px-1 w-full text-base font-medium text-dark hover:text-primary dark:text-white lg:mx-5 lg:inline-flex lg:py-6 lg:px-0 transition-colors duration-200"
           >
             {children}
           </Link>

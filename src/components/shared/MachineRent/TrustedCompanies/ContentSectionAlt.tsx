@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 
 export default function ContentSectionAlt() {
   return (
-    <section className="pb-12 sm:pb-16 dark:bg-dark overflow-hidden">
-      <div className="mx-auto container px-4 sm:px-6">
-        <div className="grid items-center gap-8 sm:gap-10 lg:gap-12 lg:grid-cols-2 xl:gap-24">
+    <section className="py-12 sm:py-16 lg:py-20 dark:bg-dark overflow-hidden">
+      <div className="mx-auto container px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-10 sm:gap-12 md:gap-16 lg:gap-12 xl:gap-20 lg:grid-cols-2">
           <motion.div
-            className="w-full pl-10"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="w-full  lg:pl-10 order-2 lg:order-1"
+            initial={{ opacity: 0, y: 30, x: 0 }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
@@ -59,29 +59,26 @@ export default function ContentSectionAlt() {
             </div>
           </motion.div>
           <motion.div
-            className="w-full"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="w-full order-1 lg:order-2"
+            initial={{ opacity: 0, y: -30, x: 0 }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <div className="relative z-10 pl-5 pt-5 sm:pl-8 sm:pt-8 lg:pl-10 lg:pt-10">
+            <div className="z-10">
               <motion.div
-                className="absolute left-0 top-0 -z-10 aspect-[430/508] w-full max-w-[430px] bg-purple-light-3"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-              ></motion.div>
-              <motion.div
-                className="shadow-lg"
+                className="shadow-lg rounded-lg overflow-hidden"
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 300 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
               >
                 <img
                   src="https://cdn.abacus.ai/images/d6a5a6f4-e71d-43b9-b33e-18c3ea5aabd1.png"
-                  alt="about image"
-                  className="w-full h-100 rounded-lg"
+                  alt="AI Skincare Vending Machine - Cost Effective"
+                  className="w-full h-auto aspect-[4/3] sm:aspect-[4/3] md:aspect-[4/3] lg:aspect-auto object-cover object-center rounded-lg"
+                  loading="lazy"
                 />
               </motion.div>
             </div>

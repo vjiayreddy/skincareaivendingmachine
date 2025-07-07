@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -20,6 +19,7 @@ import {
   QrCodeIcon
 } from "@heroicons/react/24/outline";
 
+// Map of icon components by name for dynamic rendering
 const iconMap: { [key: string]: any } = {
   CloudArrowUpIcon,
   LockClosedIcon,
@@ -37,7 +37,22 @@ const iconMap: { [key: string]: any } = {
   QrCodeIcon
 };
 
-
+// Function to match title to most appropriate icon
+const getIconForTitle = (title: string) => {
+  const titleLower = title.toLowerCase();
+  
+  if (titleLower.includes('ai') || titleLower.includes('machine learning')) return 'SparklesIcon';
+  if (titleLower.includes('touchless') || titleLower.includes('experience')) return 'DeviceTabletIcon';
+  if (titleLower.includes('reports') || titleLower.includes('analytics')) return 'ChartBarIcon';
+  if (titleLower.includes('inventory') || titleLower.includes('management')) return 'CubeIcon';
+  if (titleLower.includes('products') || titleLower.includes('skincare')) return 'BeakerIcon';
+  if (titleLower.includes('scan') || titleLower.includes('code')) return 'QrCodeIcon';
+  if (titleLower.includes('scalable') || titleLower.includes('model')) return 'BuildingStorefrontIcon';
+  if (titleLower.includes('purchase') || titleLower.includes('buy')) return 'ShoppingCartIcon';
+  
+  // Default fallback
+  return 'CogIcon';
+};
 
 // Feature data - can be moved to external JSON file later
 const featuresData = [
@@ -82,7 +97,15 @@ const featuresData = [
 export default function KeyFeatures() {
   // State for tracking which cards have been animated
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
- 
+  
+  // Function to check if an element is in viewport
+  const isElementInViewport = (el: Element) => {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  };
   
   // Set up intersection observer to animate cards when they come into view
   useEffect(() => {
