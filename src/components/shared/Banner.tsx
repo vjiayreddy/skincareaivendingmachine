@@ -9,7 +9,7 @@ const BannerComponent = () => {
   const trigger = useRef<HTMLButtonElement | null>(null);
   const modal = useRef<HTMLDivElement | null>(null);
 
-  // close on click outside
+  // close on click outsideL
   useEffect(() => {
     const clickHandler = ({ target }: MouseEvent) => {
       if (!modal.current || !trigger.current) return;
@@ -38,39 +38,6 @@ const BannerComponent = () => {
   return (
     <>
       <div className="lg:relative bg-gray-100">
-        <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-40 lg:text-left">
-          <div className="px-6 sm:px-8 lg:w-1/2 xl:pr-16">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <span className="block xl:inline">
-                India&apos;s First <span className="text-green-700">AI</span> Skincare
-              </span>{" "}
-              <span className="block text-green-700 xl:inline">
-                Vending Machine
-              </span>
-            </h1>
-            <p className="mx-auto mt-3 max-w-md text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-              Personalised skincare, powered by AI — Get instant analysis, product recommendations, and purchase on the spot.
-            </p>
-            <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
-              <div className="rounded-md shadow-sm">
-                <button
-                  onClick={() => setContactModalOpen(true)}
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-green-800 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:px-10 md:py-4 md:text-lg"
-                >
-                  Get a Demo
-                </button>
-              </div>
-              <div className="mt-3 rounded-md shadow-sm sm:mt-0 sm:ml-3">
-                <button
-                  onClick={() => setContactModalOpen(true)}
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-green-700 hover:bg-gray-50 md:px-10 md:py-4 md:text-lg"
-                >
-                  Partner With Us
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="relative h-100 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
           <img
             alt="Smart Skincare Vending Machine"
@@ -100,13 +67,45 @@ const BannerComponent = () => {
             </button>
           </div>
         </div>
+        <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-40 lg:text-left">
+          <div className="px-6 sm:px-8 lg:w-1/2 xl:pr-16">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+              <span className="block xl:inline">
+                India&apos;s First <span className="text-green-700">AI</span>{" "}
+                Skincare
+              </span>{" "}
+              <span className="block text-green-700 xl:inline">
+                Vending Machine
+              </span>
+            </h1>
+            <p className="mx-auto mt-3 max-w-md text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
+              Personalised skincare, powered by AI — Get instant analysis,
+              product recommendations, and purchase on the spot.
+            </p>
+            <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
+              <div className="rounded-md shadow-sm">
+                <button
+                  onClick={() => setContactModalOpen(true)}
+                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-green-800 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:px-10 md:py-4 md:text-lg"
+                >
+                  Get a Demo
+                </button>
+              </div>
+              <div className="mt-3 rounded-md shadow-sm sm:mt-0 sm:ml-3">
+                <button
+                  onClick={() => setContactModalOpen(true)}
+                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-green-700 hover:bg-gray-50 md:px-10 md:py-4 md:text-lg"
+                >
+                  Partner With Us
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       {modalOpen && (
         <div className="fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center bg-black bg-opacity-70">
-          <div
-            ref={modal}
-            className="mx-auto w-full max-w-[750px] bg-white"
-          >
+          <div ref={modal} className="mx-auto w-full max-w-[750px] bg-white">
             <video
               className="h-[200px] sm:h-[420px] md:h-[420px] lg:h-[420px] xl:h-[500px] 2xl:h-[600px] w-full"
               src="/video/leaf_water.mp4"
@@ -129,7 +128,7 @@ const BannerComponent = () => {
         </div>
       )}
       {/* Contact Form Modal */}
-      <ContactFormModal 
+      <ContactFormModal
         isOpen={contactModalOpen}
         onClose={() => setContactModalOpen(false)}
       />
