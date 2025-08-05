@@ -5,17 +5,17 @@ import Image from "next/image";
 
 const Manufacturing = () => {
   return (
-    <div className="overflow-x-hidden min-h-screen">
+    <div className="overflow-x-hidden min-h-screen  bg-white">
       <div className="w-full">
         <Image
           alt="Manufacturing facility for skincare vending machines"
-          src="/images/manufacturing-facility.png"
+          src="/images/inhouse.png"
           width={1920}
           height={800}
           className="aspect-[7/4] sm:aspect-[7/3] md:aspect-[7/2.5] lg:aspect-[7/2] w-full object-cover"
         />
       </div>
-      <div className="mx-auto mt-10 sm:mt-16 md:mt-20 pb-10 px-5 lg:px-0  lg:mt-32 max-w-7xl">
+      <div className="mx-auto  bg-white mt-10 sm:mt-16 md:mt-20 pb-10 px-5 lg:px-0  lg:mt-32 max-w-7xl">
         <div className="mx-auto max-w-3xl lg:mx-0">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
             Manufacturing & White Labeling
@@ -98,7 +98,7 @@ const Manufacturing = () => {
                   <li className="flex gap-x-2">
                     <div className="mt-6 sm:mt-8">
                       <a
-                        href="#"
+                        href="/contact-us"
                         className="flex w-full items-center justify-center rounded-md border border-transparent bg-green-800 px-8 py-3 text-base font-medium text-white hover:bg-white hover:border-green-800 hover:text-green-800 md:px-10 md:py-4 md:text-lg"
                       >
                         Contact Us
@@ -117,7 +117,7 @@ const Manufacturing = () => {
             <div className="relative h-64 sm:h-80 md:h-96 lg:h-auto lg:-ml-8 lg:w-full lg:grow xl:ml-0">
               <Image
                 alt="White labeling options for vending machines"
-                src="/images/white-labeling.png"
+                src="/images/inhouse.png"
                 width={800}
                 height={600}
                 className="rounded-lg h-full w-full object-cover object-center shadow-md lg:absolute lg:inset-0 lg:size-full"
@@ -188,7 +188,7 @@ const Manufacturing = () => {
                      
                     >
                       <a
-                        href="#"
+                        href="/contact-us"
                         className="flex w-full items-center justify-center rounded-md border border-transparent bg-[#356A5A] px-6 py-2.5 sm:px-8 sm:py-3 text-base font-medium text-white hover:bg-green-800 transition-colors duration-200 md:px-10 md:py-4 md:text-lg"
                       >
                         Contact Us

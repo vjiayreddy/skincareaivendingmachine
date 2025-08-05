@@ -124,7 +124,9 @@ export default function ContactInfo() {
                       <p className="text-sm text-gray-500 font-medium">
                         PHONE NUMBER
                       </p>
-                      <p className="text-base">+91 8977016605</p>
+                      <p   style={{
+                  color: "black",
+                }} className="text-base ">+91 8977016605</p>
                     </div>
                   </div>
 
@@ -150,7 +152,9 @@ export default function ContactInfo() {
                       <p className="text-sm text-gray-500 font-medium">
                         E-MAIL ADDRESS
                       </p>
-                      <p className="text-base">reachleafwater@gmail.com</p>
+                      <p   style={{
+                  color: "black",
+                }} className="text-base">reachleafwater@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -191,6 +195,9 @@ export default function ContactInfo() {
                       type="text"
                       name="firstName"
                       placeholder="First Name"
+                        style={{
+                  color: "black",
+                }}
                       value={formData.firstName}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-teal-500"
@@ -200,6 +207,9 @@ export default function ContactInfo() {
                   <div>
                     <input
                       type="text"
+                        style={{
+                  color: "black",
+                }}
                       name="lastName"
                       placeholder="Last Name"
                       value={formData.lastName}
@@ -214,6 +224,9 @@ export default function ContactInfo() {
                 <div className="flex">
                   <select
                     name="countryCode"
+                      style={{
+                  color: "black",
+                }}
                     value={formData.countryCode}
                     onChange={handleCountryCodeChange}
                     className="w-20 px-2 py-2 border border-gray-300 border-r-0 rounded-l-md focus:outline-none focus:ring-1 focus:ring-teal-500 bg-gray-50"
@@ -227,6 +240,9 @@ export default function ContactInfo() {
                   <input
                     type="tel"
                     name="phoneNumber"
+                      style={{
+                  color: "black",
+                }}
                     placeholder="Phone Number"
                     value={formData.phoneNumber}
                     onChange={handleChange}
@@ -241,6 +257,9 @@ export default function ContactInfo() {
                 <div>
                   <textarea
                     name="notes"
+                      style={{
+                  color: "black",
+                }}
                     placeholder="Additional notes (optional)"
                     value={formData.notes}
                     onChange={handleChange}
