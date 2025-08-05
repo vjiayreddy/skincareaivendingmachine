@@ -1,0 +1,9 @@
+<!-- This is actually an SVG file saved as JPG for demonstration purposes -->
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#1a202c"/>
+  <g opacity="0.2">
+    <circle cx="300" cy="400" r="250" fill="#2d3748"/>
+    <circle cx="900" cy="300" r="200" fill="#4a5568"/>
+    <circle cx="600" cy="600" r="300" fill="#2d3748"/>
+  </g>
+</svg>

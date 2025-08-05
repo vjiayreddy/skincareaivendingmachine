@@ -1,15 +1,17 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Manufacturing = () => {
   return (
     <div className="overflow-x-hidden min-h-screen">
       <div className="w-full">
-        <img
+        <Image
           alt="Manufacturing facility for skincare vending machines"
-          src="https://cdn.abacus.ai/images/c2072100-9130-4c12-81d8-bfb18a7c7753.png"
+          src="/images/manufacturing-facility.png"
+          width={1920}
+          height={800}
           className="aspect-[7/4] sm:aspect-[7/3] md:aspect-[7/2.5] lg:aspect-[7/2] w-full object-cover"
         />
       </div>
@@ -28,11 +30,12 @@ const Manufacturing = () => {
         <div className="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end">
           <div className="mb-8 lg:mb-0 lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2">
             <div className="relative h-64 sm:h-80 md:h-96 lg:h-auto lg:-ml-8 lg:w-full lg:grow xl:ml-0">
-              <img
+              <Image
                 alt="In-house production facility"
                 src="/images/inhouse.png"
+                width={800}
+                height={600}
                 className="rounded-lg h-full w-full object-cover object-center shadow-md lg:absolute lg:inset-0 lg:size-full"
-                loading="lazy"
               />
             </div>
           </div>
@@ -112,11 +115,12 @@ const Manufacturing = () => {
         <div className="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end">
           <div className="mb-8 lg:mb-0 lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2">
             <div className="relative h-64 sm:h-80 md:h-96 lg:h-auto lg:-ml-8 lg:w-full lg:grow xl:ml-0">
-              <img
-                alt="White labeled skincare vending machine"
-                src="https://cdn.abacus.ai/images/90bf040e-7ca2-4908-ba45-665f123aeadb.png"
+              <Image
+                alt="White labeling options for vending machines"
+                src="/images/white-labeling.png"
+                width={800}
+                height={600}
                 className="rounded-lg h-full w-full object-cover object-center shadow-md lg:absolute lg:inset-0 lg:size-full"
-                loading="lazy"
               />
             </div>
           </div>
@@ -179,18 +183,17 @@ const Manufacturing = () => {
                     </span>
                   </li>
                   <li className="flex gap-x-2">
-                    <motion.div
+                    <div
                       className="rounded-md mt-6 sm:mt-8 shadow-sm"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                     
                     >
                       <a
                         href="#"
-                        className="flex w-full items-center justify-center rounded-md border border-transparent bg-green-700 px-6 py-2.5 sm:px-8 sm:py-3 text-base font-medium text-white hover:bg-green-800 transition-colors duration-200 md:px-10 md:py-4 md:text-lg"
+                        className="flex w-full items-center justify-center rounded-md border border-transparent bg-[#356A5A] px-6 py-2.5 sm:px-8 sm:py-3 text-base font-medium text-white hover:bg-green-800 transition-colors duration-200 md:px-10 md:py-4 md:text-lg"
                       >
                         Contact Us
                       </a>
-                    </motion.div>
+                    </div>
                   </li>
                 </ul>
               </div>

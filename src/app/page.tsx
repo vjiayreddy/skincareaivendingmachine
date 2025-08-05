@@ -1,18 +1,31 @@
-import KeyFeatures from "@/components/shared/KeyFeature";
-import HowToWork from "@/components/shared/HowToWork";
-import DiscoverMachine from "@/components/shared/DiscoverMachine/DIscoverMachine";
-import CtaSection from "@/components/shared/CtaSection/CtaSection";
-import BannerComponent from "@/components/shared/Banner";
+import CustomBusinessSection from "@/components/CustomBusinessSection";
+import HeroBannerTwo from "@/components/HeroBannerTwo";
+import HowItWorks from "@/components/HowItWorks";
+import ServicesOverview from "@/components/ServicesOverview";
+import KeyFeatures from "@/components/KeyFeatures";
+import InvestmentCTA from "@/components/InvestmentCTA";
+import ContactFormSection from "@/components/ContactFormSection";
+import NewsletterSubscriptionBar from "@/components/NewsletterSubscriptionBar";
 
 
-export default function HomePage() {
+export const metadata = {
+  title: "AI-Powered Skincare Vending Machine | Home",
+  description:
+    "Revolutionary vending machines that analyze skin conditions in real-time and recommend personalized skincare products.",
+};
+
+const HomePage = () => {
   return (
     <>
-      <BannerComponent/>
-      <HowToWork/>
+      <HeroBannerTwo />
+      <CustomBusinessSection />
+      <ServicesOverview />
+      <HowItWorks />
       <KeyFeatures />
-      <DiscoverMachine/>
-      <CtaSection/>
+      <InvestmentCTA />
+      <ContactFormSection />
+      <NewsletterSubscriptionBar />
     </>
   );
-}
+};
+export default HomePage;
