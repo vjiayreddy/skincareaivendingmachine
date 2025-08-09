@@ -74,8 +74,8 @@ export default function HowItWorks() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-20">
           {/* Left side - Swiper slides */}
-          <div className={`md:w-1/2 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
-            <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-lg">
+          <div className={`w-full md:w-1/2 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
+            <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
               <Swiper
                 modules={[Autoplay]}
                 spaceBetween={30}
@@ -85,53 +85,59 @@ export default function HowItWorks() {
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
                 onSlideChange={(swiper) => setActiveStep(swiper.activeIndex)}
                 className="h-full w-full"
+                style={{ height: '100%', width: '100%', position: 'relative' }}
               >
                 <SwiperSlide>
-                  <div className="relative w-full h-full">
+                  <div className="relative w-full h-full" style={{ display: 'block', overflow: 'hidden', height: '100%' }}>
                     <Image
                       src="/images/scan-face.png"
                       alt="Scan your face"
                       fill
+                      style={{ objectFit: 'cover', display: 'block', width: '100%', height: '100%', position: 'absolute' }}
                       className="object-cover"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="relative w-full h-full">
+                  <div className="relative w-full h-full" style={{ display: 'block', overflow: 'hidden', height: '100%' }}>
                     <Image
                       src="/images/scan_complete.png"
                       alt="Answer a few simple questions"
                       fill
+                      style={{ objectFit: 'cover', display: 'block', width: '100%', height: '100%', position: 'absolute' }}
                       className="object-cover"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="relative w-full h-full">
+                  <div className="relative w-full h-full" style={{ display: 'block', overflow: 'hidden', height: '100%' }}>
                     <Image
                       src="/images/get-report.png"
                       alt="Get your skin profile"
                       fill
+                      style={{ objectFit: 'cover', display: 'block', width: '100%', height: '100%', position: 'absolute' }}
                       className="object-cover"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="relative w-full h-full">
+                  <div className="relative w-full h-full" style={{ display: 'block', overflow: 'hidden', height: '100%' }}>
                     <Image
                       src="/images/products.png"
                       alt="Personalized product recommendations"
                       fill
+                      style={{ objectFit: 'cover', display: 'block', width: '100%', height: '100%', position: 'absolute' }}
                       className="object-cover"
                     />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className="relative w-full h-full">
+                  <div className="relative w-full h-full" style={{ display: 'block', overflow: 'hidden', height: '100%' }}>
                     <Image
                       src="/images/payment.png"
                       alt="Buy directly from machine"
                       fill
+                      style={{ objectFit: 'cover', display: 'block', width: '100%', height: '100%', position: 'absolute' }}
                       className="object-cover"
                     />
                   </div>

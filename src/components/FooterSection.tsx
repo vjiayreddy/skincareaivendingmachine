@@ -105,18 +105,16 @@ export default function FooterSection() {
             <p className="text-sm text-gray-700 mb-3">We accept:</p>
             <div className="flex justify-center space-x-4">
               <div className="h-8 w-12 relative">
-                <Image src="/images/visa.png" alt="Visa" width={48} height={32} className="object-contain" />
+                <Image src="/images/payment/gpay.png" alt="Visa" width={48} height={32} className="object-contain" />
               </div>
               <div className="h-8 w-12 relative">
-                <Image src="/images/mastercard.png" alt="Mastercard" width={48} height={32} className="object-contain" />
+                <Image src="/images/payment/paytm.png" alt="Mastercard" width={48} height={32} className="object-contain" />
               </div>
              
               <div className="h-8 w-12 relative">
-                <Image src="/images/applepay.png" alt="Apple Pay" width={48} height={32} className="object-contain" />
+                <Image src="/images/payment/phonepe.png" alt="Apple Pay" width={48} height={32} className="object-contain" />
               </div>
-              <div className="h-8 w-12 relative">
-                <Image src="/images/googlepay.png" alt="Google Pay" width={48} height={32} className="object-contain" />
-              </div>
+             
             </div>
           </div>
         </div>
