@@ -36,7 +36,7 @@ const SkincareTechnology = () => {
               Let Your Technology Tell Your Brand Story
             </h3>
             <p className="text-lg text-gray-700">
-              Every Leafwater Vending Machine interface is designed to reflect your brand's identity—right 
+              Every Leafwater Vending Machine interface is designed to reflect your brand&apos;s identity—right 
               down to the smallest detail. From the on-screen experience to the way recommendations are 
               presented, the system speaks your language, tells your story, and strengthens your presence in
               every location.
