@@ -128,8 +128,8 @@ const PrivacyPolicyPage = () => {
               Have Questions About Your Privacy?
             </h3>
             <p className="text-gray-700 mb-4">
-              We're committed to transparency. If you have any concerns about how your data
-              is handled, please don't hesitate to reach out.
+              We&apos;re committed to transparency. If you have any concerns about how your data
+              is handled, please don&apos;t hesitate to reach out.
             </p>
             <a
               href="/contact-us"

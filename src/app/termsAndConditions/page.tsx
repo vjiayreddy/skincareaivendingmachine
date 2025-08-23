@@ -23,7 +23,7 @@ const TermsPage = () => {
           <h2 className="text-xl font-semibold text-teal-800 mb-4">1. Appointments & Scheduling</h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li>Clients are required to arrive on time for all appointments. A grace period of 10 minutes is allowed.</li>
-            <li>We ask for 24 hours' notice to cancel or reschedule appointments. Late cancellations and no-shows may be charged a fee or forfeit the session.</li>
+            <li>We ask for 24 hours&apos; notice to cancel or reschedule appointments. Late cancellations and no-shows may be charged a fee or forfeit the session.</li>
             <li>Repeated no-shows may result in loss of booking privileges.</li>
           </ul>
         </div>
