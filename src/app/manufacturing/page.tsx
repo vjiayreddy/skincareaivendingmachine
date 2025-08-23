@@ -20,10 +20,6 @@ const Manufacturing = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
             Manufacturing & White Labeling
           </h2>
-          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg/8 text-gray-600">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-            voluptatum cupiditate veritatis in accusamus quisquam.
-          </p>
         </div>
       </div>
       <div className="relative bg-white mx-auto mb-20 max-w-7xl px-6 sm:mt-10 lg:px-8">

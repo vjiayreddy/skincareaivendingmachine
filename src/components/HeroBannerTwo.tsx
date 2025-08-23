@@ -53,11 +53,10 @@ const HeroBannerTwo = () => {
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          Personalized skincare, powered by AI - get instant analysis,
+          Delivers instant analysis, product recommendations,
           <br />
-          product recommendations, and purchase on the spot,
+          and purchases—all powered by AI and realtime data
           <br />
-          <span className="font-medium">anywhere and everywhere.</span>
         </p>
         <div className="relative w-full max-w-md mx-auto mt-auto mb-0">
           {/* Rectangular border around vending machine */}

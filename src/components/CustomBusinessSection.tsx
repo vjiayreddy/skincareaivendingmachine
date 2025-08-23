@@ -44,12 +44,12 @@ export default function CustomBusinessSection() {
                 : "-translate-x-20 opacity-0"
             }`}
           >
-            <div className="w-[60%] h-[60%] mx-auto relative">
+            <div className="mx-auto w-[100%] h-[100%] sm:w-[80%] sm:h-[80%] md:w-[70%] md:h-[70%] lg:w-[60%] lg:h-[60%] xl:w-[60%] xl:h-[60%] relative">
               <Image
                 src="/images/unparalled.png"
                 alt="AI Powered Skincare Vending Machine"
-                width={400}
-                height={400}
+                width={300}
+                height={300}
                 className="object-cover w-full h-full"
               />
             </div>

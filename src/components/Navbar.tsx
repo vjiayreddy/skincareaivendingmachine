@@ -22,12 +22,14 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
+    { name: "Software", href: "/software" },
+    { name: "Technology", href: "/technology" },
     { name: "Manufacturing", href: "/manufacturing" },
     { name: "Contact Us", href: "/contact-us" },
   ];
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="absolute h-[60px] inset-x-0 top-0 z-50">
       <nav
         className={`w-full transition-all duration-300 ${
           isScrolled
@@ -40,7 +42,12 @@ export default function Navbar() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <div className="flex-shrink-0">
-                  <Image src="/images/logo.svg" alt="LEAF WATER Logo" width={150} height={40} />
+                  <Image
+                    src="/images/logo.svg"
+                    alt="LEAF WATER Logo"
+                    width={150}
+                    height={30}
+                  />
                 </div>
               </Link>
             </div>
