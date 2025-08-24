@@ -7,7 +7,7 @@ const SoftwarePage = () => {
       <div className="w-full">
         <Image
           alt="Manufacturing facility for skincare vending machines"
-          src="/images/software.jpg"
+          src="/images/software_2.png"
           width={1920}
           height={800}
           className="aspect-[7/4] sm:aspect-[7/3] md:aspect-[7/2.5] lg:aspect-[7/2] w-full object-cover"

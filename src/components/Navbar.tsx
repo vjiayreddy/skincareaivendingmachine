@@ -29,12 +29,32 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="absolute h-[60px] inset-x-0 top-0 z-50">
+    <header className="absolute inset-x-0 top-0 z-50">  
+      {/* Info Bar */}
+      <div className="bg-[#1A4E3E] py-1 text-xs text-white">
+        <div className="mx-auto max-w-7xl px-5 sm:px-4 lg:px-8">
+          <div className="flex items-center justify-between">
+            <div className="hidden sm:block">Leaf Water Innovation</div>
+            <a 
+              href="https://leafwater.in/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mx-auto sm:mx-0 flex items-center hover:text-gray-200 transition-colors duration-200"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
+              </svg>
+              <span>leafwater.in</span>
+              
+            </a>
+          </div>
+        </div>
+      </div>
       <nav
         className={`w-full transition-all duration-300 ${
           isScrolled
             ? "fixed top-0 bg-[#356A5A] shadow-lg"
-            : "absolute bg-[#356A5A]"
+            : "absolute top-[24px] bg-[#356A5A]"
         }`}
       >
         <div className="mx-auto max-w-7xl px-5 sm:px-4 lg:px-8">
